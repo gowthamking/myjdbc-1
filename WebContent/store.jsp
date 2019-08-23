@@ -9,7 +9,7 @@ String pass1=request.getParameter("rconfirmpass");
 if(pass.equals(pass1)){
 try{
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://myrds.c7mou0tuadst.eu-west-2.rds.amazonaws.com:3306/zippyopsdb","admin","zippyops");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://wpdb.cmrsarlfheob.ap-southeast-1.rds.amazonaws.com:3306/wordpress_db","admin","zippyops");
 	PreparedStatement ps=conn.prepareStatement("insert into registration values(?,?,?,?)");
 	ps.setString(1, name);
 	ps.setString(2, email);
